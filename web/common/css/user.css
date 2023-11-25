@@ -1,0 +1,86 @@
+.load-users-loading-gif {
+    vertical-align: middle;
+    font-size: 7px;
+    display: none;
+}
+
+.remove-user-loading-gif {
+    position: absolute;
+    left: calc(50% - 20px);
+    top: 10%;
+    width: 42px;
+    display: none;
+    z-index: 1;
+}
+
+.add-user-loading-gif{
+    position: absolute;
+    left: calc(50% - 20px);
+    top: 50%;
+    width: 42px;
+    display: none;
+    z-index: 1;
+}
+
+.user-container {
+    display: inline-block;
+    margin: 25px 0 50px 0;
+}
+
+.user-info {
+    display: none;
+    padding: 15px 15px 10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 1px solid whitesmoke;
+}
+
+.user-info label {
+    width: 165px;
+    text-align: right;
+}
+
+.user-info span {
+    margin-left: 5px;
+}
+
+.add-new-user-container {
+    float: right;
+    padding: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+}
+
+.user-remove {
+    margin-left: 5px;
+    vertical-align: middle;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.change-icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.user-remove:hover, .change-situation:hover, .change-assessor:hover {
+    color: #333;
+}
+
+.add-user-container .control-label {
+    width: 130px;
+}
+
+.add-user-name, .add-user-email {
+    width: calc(100% - 140px) !important;
+}
+
+.add-user-container label[for=name], .add-user-container label[for=email] {
+    margin-left: 135px;
+}

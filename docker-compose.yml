@@ -1,0 +1,69 @@
+services:
+  app-financeiro:
+    build: .
+    container_name: financeiro-app
+    restart: always
+    ports:
+      - 80:80
+    expose:
+      - 80
+    networks:
+      - financeiro-network
+    environment:
+      HOST_DB: 'mysql-financeiro'
+      USER_DB: 'root'
+      PWD_DB: 'root'
+      YII_DEBUG: 'true'
+      XDEBUG_CONFIG: remote_host=172.24.112.1 # wsl network ip
+      PHP_IDE_CONFIG: "serverName=xdebug-docker"
+    volumes:
+      - .:/app
+      - /app/vendor/
+      #- ./docker/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      # - ./docker/php/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql-financeiro
+    restart: always
+    command: mysqld --sql_mode=""
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    deploy:
+        resources:
+            limits:
+              cpus: '2'
+              memory: 1024M
+            reservations:
+              cpus: '1'
+              memory: 1GB
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    volumes:
+      - ./docker/db:/var/lib/mysql
+    networks:
+      - financeiro-network
+  
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8088:8080
+    networks:
+      - financeiro-network
+
+networks:
+  financeiro-network:
+
+volumes:
+  db-volume:
+
+

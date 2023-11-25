@@ -1,0 +1,12 @@
+.load-year-loading-gif {
+    vertical-align: middle;
+    font-size: 10px;
+    margin-left: 5px;
+    display: none;
+}
+
+.charts-container {
+    display: inline-block;
+    margin-top: 25px;
+    width: 100%;
+}

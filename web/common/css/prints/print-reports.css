@@ -1,0 +1,80 @@
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@page {
+    margin: 1.5cm 0.75cm;
+}
+
+body {
+    margin: 0;
+}
+
+.table > tbody > tr:nth-of-type(even) {
+    background-color: #eee !important;
+}
+
+.table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table > thead > tr > th {
+    vertical-align: bottom;
+}
+
+.table-title {
+    font-size: 18px;
+    text-align: center !important;
+}
+
+.dataTables_empty {
+    text-align: center !important;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+    border: 1px solid #333;
+    font-size: 12px;
+    text-align: left;
+}
+
+tr:not(.spacing) > td, tr > th {
+    padding: 6px;
+}
+
+.select2, select {
+    display: none;
+}
+
+.money {
+    white-space: pre;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.outtable-label {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.project-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.project-date {
+    text-align: center;
+    margin-bottom: 15px;
+}

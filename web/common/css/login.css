@@ -1,0 +1,172 @@
+html,
+body {
+    height: 100%;
+    background: url("../img/main-background.png");
+}
+
+.ipti-logo {
+    width:80px;
+    margin: 3% auto 2%;
+    display: block;
+}
+
+.login-panel, .recover-panel, .password-panel {
+    background: transparent;
+    width: 500px;
+    margin: 0 auto;
+    color: black;
+    padding: 20px 20px 15px;
+    -webkit-box-shadow: 1px 1px 15px black;
+    -moz-box-shadow: 1px 1px 15px black;
+    box-shadow: 1px 1px 15px black;
+}
+
+.checkbox input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.panel-heading.main-panel {
+    background-color: transparent !important;
+    color: black !important;
+    border-color: transparent !important;
+}
+
+.panel-title {
+    font-size: 24px !important;
+    font-weight: 300;
+}
+
+.panel-default {
+    border-color: whitesmoke;
+}
+
+.panel-body i {
+    color: #ccc;
+}
+
+.checkbox {
+    display: inline-block;
+}
+
+.create-account {
+    padding-top: 5px;
+}
+
+.create-account p {
+    margin-top: 10px;
+}
+
+.copyright {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    color: black;
+    font-size: 13px;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .fa {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+/* align icon */
+.left-addon .fa {
+    left: 0px;
+}
+
+.right-addon .fa {
+    right: 0px;
+}
+
+/* add padding  */
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
+}
+
+.register-panel .checkbox a {
+    color: black
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+i.invalid {
+    color: red;
+}
+
+input.invalid {
+    border-color: red !important;
+}
+
+label.invalid {
+    color: red;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.alert {
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .18);
+    padding: 12px;
+    display: none;
+}
+
+.display-hide {
+    display: none;
+}
+
+.back-to-login {
+    color: white !important;
+    cursor: pointer;
+    font-size: 30px !important;
+}
+
+.back-to-login:hover {
+    color: darkgray !important;
+}
+
+#forget-password {
+    color: black;
+    text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+@media (max-width: 500px) {
+    .login-panel, .recover-panel, .password-panel {
+        width: 400px;
+    }
+
+    .ipti-logo {
+        width:120px;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-panel, .recover-panel, .password-panel {
+        width: 300px;
+    }
+
+    .ipti-logo {
+        width:100px;
+    }
+}

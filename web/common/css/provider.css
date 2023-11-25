@@ -1,0 +1,346 @@
+.provider-container {
+    position: relative;
+}
+
+.providers-container {
+    display: inline-block;
+    margin: 25px 0 50px 0;
+}
+
+.providers {
+    width: 600px;
+}
+
+.add-new-button-container {
+    float: right;
+    padding: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+}
+
+.manage-provider-loading-gif {
+    position: absolute;
+    left: calc(50% - 20px);
+    top: 60px;
+    width: 42px;
+    display: none;
+    z-index: 1;
+}
+
+#manage-provider-modal .control-label {
+    width: 35%;
+}
+
+#manage-provider-modal .radio {
+    margin-right: 10px;
+}
+
+.conta-container {
+    margin-bottom: 0px;
+}
+
+.provider-menu {
+    float: right;
+    border: 1px solid #f5f5f5;
+    padding: 10px 8px 10px 10px;
+    border-radius: 5px;
+    margin: -7px 0 0 10px;
+    display: none;
+}
+
+.provider-menu > i {
+    cursor: pointer;
+    margin: 0 3px;
+    width: 13px;
+}
+
+.provider-menu i:hover {
+    color: #333;
+}
+
+.remove-provider-loading-gif, .remove-contract-loading-gif {
+    position: absolute;
+    left: calc(50% - 20px);
+    top: 15px;
+    width: 42px;
+    display: none;
+    z-index: 1;
+}
+
+.load-provider-loading-gif {
+    float: right;
+    margin-left: 10px;
+    width: 28px;
+    display: none;
+}
+
+.provider-data-container div {
+    float: left;
+    width: 50%;
+}
+
+.provider-type-container .control-label {
+    width: 151px !important
+}
+
+.conta-container div {
+    float: left;
+    width: 50%;
+}
+
+.conta-container hr {
+    margin-top: 5px !important
+}
+
+.conta-container .control-label {
+    width: 151px !important
+}
+
+.conta-container .provider-conta-banco, .conta-container .provider-conta-tipo {
+    width: 196px;
+    height: 34px;
+}
+
+.provider-no-result {
+    background: #f5f5f5;
+}
+
+.provider-items {
+    display: none;
+}
+
+.add-new-contract {
+    margin-top: 10px;
+    float: right;
+}
+
+.provider-provision-button {
+    float: right;
+    margin: 10px 5px 20px 0;
+}
+
+#provider-items-table, .provider-no-result {
+    margin-bottom: 0px;
+}
+
+.contract-name {
+    text-align: center;
+}
+
+.col-item-id {
+    display: none !important;
+}
+
+.col-item-initial-date, .col-item-final-date {
+    width: 150px;
+}
+
+.col-item-final-date.inativo {
+    color: red;
+}
+
+.col-item-plots {
+    width: 80px;
+}
+
+.col-item-money {
+    width: 200px;
+}
+
+.table-icons {
+    width: 87px;
+}
+
+.table-icons i {
+    cursor: pointer;
+    color: darkred;
+    margin-left: 8px;
+    width: 14px;
+}
+
+.table-icons i:hover {
+    color: #333;
+}
+
+.manage-contract-loading-gif {
+    position: absolute;
+    left: calc(50% - 20px);
+    top: 60px;
+    width: 42px;
+    display: none;
+    z-index: 1;
+}
+
+.manage-contract-container label {
+    width: 90px;
+}
+
+.contract-items-container, .item-selected-container {
+    display: none;
+}
+
+.contracts, .contract-items {
+    width: 250px;
+}
+
+.load-items-loading-gif, .load-item-info-loading-gif {
+    float: right;
+    margin-left: 10px;
+    width: 28px;
+    display: none;
+}
+
+.contracts-container, .contract-items-container {
+    display: inline-block;
+}
+
+.date-container > div, .value-plots-container > div {
+    float: left;
+    width: 50%;
+}
+
+.date-container input, .value-plots-container input {
+    width: calc(100% - 140px) !important;
+}
+
+.item-total-value {
+    float: right;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+    margin: -7px 0 0 20px;
+    display: none;
+}
+
+.activity-number {
+    padding: 5px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    margin-right: 10px;
+    min-width: 33px;
+    float: left;
+    margin-top: 11px;
+    font-weight: bold;
+}
+
+.activity-description {
+    resize: none;
+    width: 450px !important;
+    margin-right: 10px;
+}
+
+.activity-value {
+    width: 144px !important;
+    margin-right: 10px;
+}
+
+.activity-date {
+    width: 144px !important;
+}
+
+.table > tbody + tbody {
+    border-top: 2px solid #f5f5f5;
+}
+
+.contract-dates-info > div, .contract-value-plots-info > div {
+    float: left;
+    width: 50%;
+}
+
+.contract-activities > div:first-of-type {
+    margin-top:10px;
+}
+
+.contract-activities > div {
+    display: inline-table;
+    width: 100%;
+}
+
+.activity-number-info {
+    padding: 3px 5px;
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    min-width: 33px;
+}
+
+.activity-description-info {
+    width: calc(100% - (50% - 73px));
+    text-align: justify;
+    white-space: pre-wrap;
+    margin-right: 30px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.activity-value-info {
+    width: 20%;
+    margin-right: 30px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.activity-date-info {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.contract-dates-info {
+    margin-top: 5px;
+}
+
+input[name="type"] {
+    margin-right: 5px;
+}
+
+.bank-data > div:first-child {
+    margin-top: 15px;
+}
+
+.remove-activity {
+    cursor: pointer;
+    margin: 0 10px;
+    width: 13px;
+}
+
+.remove-activity:hover {
+    color: #333;
+}
+
+.plot-divisor {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.plot-divisor:last-of-type {
+    display: none;
+}
+
+.modal-date .control-label {
+    width: 25%;
+}
+
+.only-interval {
+    width: 20px !important;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: 0px !important;
+    margin-left: 9px !important;
+}
+
+.only-interval-container {
+    margin-bottom: 10px;
+}
+
+.modal-date .initial-date-container {
+    margin-bottom: 10px;
+}
+
+.provision-initial-date-container {
+    display: none;
+}

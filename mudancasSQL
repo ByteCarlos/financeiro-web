@@ -1,0 +1,5 @@
+DELETE FROM `contrato`
+WHERE ((`id` = '2') OR (`id` = '3'));
+
+DELETE FROM `conta_bancaria`;
+DELETE FROM `fornecedor`;

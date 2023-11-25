@@ -1,0 +1,737 @@
+.launch-container {
+    position: relative;
+}
+
+.projects {
+    width: 300px;
+}
+
+.projects-container {
+    display: inline-block;
+    margin: 25px 0 50px 0;
+}
+
+@media print {
+    .hide-print {
+        display: none !important;
+    }
+    .launch-container {
+        width: 100% !important;
+        margin-left: 0px !important;
+        left: -50px !important;
+    }
+
+    .launch-container .project-info-container {
+        left: -60px !important;
+    }
+}
+
+.add-new-container {
+    float: right;
+    padding: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+    margin-bottom: 34px;
+    position: relative;
+}
+
+.add-new-project {
+    width: 200px;
+}
+
+.project-menu {
+    float: right;
+    border: 1px solid #f5f5f5;
+    padding: 10px 8px 10px 10px;
+    border-radius: 5px;
+    margin: -7px 0 0 10px;
+    display: none;
+}
+
+.project-menu > i {
+    cursor: pointer;
+    margin: 0 3px;
+    width: 13px;
+}
+
+.project-menu i:hover {
+    color: #333;
+}
+
+.load-project-loading-gif {
+    position: absolute;
+    left: 13%;
+    top: 100px;
+    width: 42px;
+    display: none;
+}
+
+.project-info-container {
+    display: none;
+    position: relative;
+    padding: 70px 15px 15px;
+    margin: 0px auto 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+    width: 1000px;
+    border: 1px solid #f5f5f5;
+}
+
+.dates-container label, .dates-container span, .add-item-container label, .add-item-container button {
+    margin-right: 10px;
+}
+
+.dates-container input, .add-item-container input, .add-item-container select {
+    margin-right: 10px;
+    width: 200px;
+}
+
+.project-manager-container {
+    display: none;
+    position: relative;
+    padding: 70px 15px 15px;
+    margin: 0px auto 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+    width: 80%;
+    border: 1px solid #f5f5f5;
+}
+
+.ribbon-title {
+    border-radius: 5px 0 0 5px !important;
+    box-shadow: -2px 2px 7px rgba(0, 0, 0, .4);
+    background: url('/common/img/header-background.png');
+    background-color: #6B6464;
+    color: whitesmoke;
+    right: -10px;
+    position: absolute;
+    top: 15px;
+    padding: .5em 1em;
+}
+
+.ribbon-title-effect:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    bottom: -10px;
+}
+
+.ribbon-title-effect:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    bottom: -10px;
+    border-width: 0 0 10px 10px;
+    border-left-color: #222;
+    right: 0;
+}
+
+.remove-project-loading-gif, .reject-justification-loading-gif, .manage-free-project-loading-gif {
+    position: absolute;
+    left: calc(50% - 20px);
+    top: 15px;
+    width: 42px;
+    display: none;
+    z-index: 1;
+}
+
+.project-info-container label {
+    width: 130px;
+}
+
+.edit {
+    display: inline-block;
+}
+
+.edit.form-control, .contract-conta-banco, .contract-coordenadores {
+    width: 300px;
+}
+
+.coordenador-container {
+    margin-bottom: 10px;
+}
+
+.coordenador-container label {
+    width: 130px;
+    display: inline-block;
+}
+
+.coordenador-container > span {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 135px);
+}
+
+.coordenador-nome {
+    display: block;
+}
+
+.manage-actions {
+    display: none;
+    border-top: 1px solid #c1c1c1;
+    margin-top: 10px;
+}
+
+.manage-actions button {
+    margin: 10px 0;
+}
+
+.quit-button {
+    margin-right: 10px !important;
+}
+
+.project-info-container .select2 {
+    display: inline-block;
+}
+
+.cc-container {
+    display: none;
+}
+
+.cc-tabs {
+    border-bottom: 1px solid #c1c1c1;
+    width: 100%;
+    float: right;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cc-tabs > ul {
+    float: left;
+    margin-bottom: 0px;
+}
+
+.cc-tabs > ul > li:first-child {
+    margin-left: 30px;
+}
+
+.cc-tabs > ul > li.active > span {
+    color: #333;
+    border-bottom: 1px solid lightgray;
+}
+
+.cc-tabs > ul > li > span {
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+    margin-right: 25px;
+    text-decoration: none;
+    color: #989b94;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cc-tabs > ul > li {
+    float: left;
+    height: 27px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.add-more-cc {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+    margin: 11px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.remove-cc {
+    margin-left: 8px;
+    padding: 3px;
+}
+
+.remove-cc:hover {
+    color: darkred;
+}
+
+.contract-initial-date, .contract-final-date, .celebration-date {
+    width: 100px !important;
+}
+
+.cc-panels > div {
+    display: none;
+}
+
+.cc-panels > div.active {
+    display: block;
+}
+
+.items-table {
+    margin-top: 20px;
+}
+
+.table > tbody + tbody {
+    border-top: 2px solid #f5f5f5;
+}
+
+.category-name {
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.col-item-id, .col-item-proposal-id {
+    display: none !important;
+}
+
+td.col-item-icon {
+    display: table-cell;
+    color: darkred;
+    vertical-align: middle !important;
+    width: 1%;
+    cursor: pointer;
+}
+
+.col-item-icon:hover {
+    color: #333;
+}
+
+.col-item-type {
+    vertical-align: middle !important;
+    width: 200px;
+}
+
+.add-item-container {
+    border: 1px solid #f5f5f5;
+    padding: 5px 10px 10px 10px;
+    float: right;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.add-item {
+    padding: 5px 10px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+    margin: 11px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.item-quantity {
+    width: 80px !important;
+}
+
+.add-item-loading-gif {
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    width: 42px;
+    display: none;
+}
+
+.item input:not(.item-value) {
+    width: 100% !important;
+}
+
+.cc-label {
+    width: 100px;
+}
+
+.used-value-title {
+    float: right;
+}
+
+.used-value-container {
+    font-size: 12px;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    bottom: 0;
+    right: 8px;
+    margin: auto;
+    height: 32px;
+}
+
+.col-item-value {
+    position: relative !important;
+}
+
+.item {
+    height: 45px;
+}
+
+.item td {
+    vertical-align: middle !important;
+}
+
+.item-value {
+    width: 50% !important;
+}
+
+.item-vinculate {
+    height: 25px;
+}
+
+.category-total-value {
+    font-weight: bold;
+}
+
+.plot-number, .plot-number-info {
+    padding: 5px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    margin-right: 101px;
+    min-width: 33px;
+    display: inline-block;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.plot-description {
+    resize: none;
+    width: 300px !important;
+    margin-right: 10px;
+}
+
+.plot-description-info {
+    width: 300px;
+    text-align: justify;
+    white-space: pre-wrap;
+    margin-right: 30px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.plot-paying-source, .plot-paying-source-info {
+    width: 190px !important;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.plot-value, .plot-value-info {
+    width: 139px !important;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.plot-date, .plot-date-info {
+    width: 139px !important;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.contract-plots-container-info > div {
+    display: block;
+    width: 100%;
+}
+
+.contract-plots-container-info > div:first-of-type {
+    margin-top: 10px;
+}
+
+.contract-plots-container-info > div:last-of-type {
+    margin-bottom: 15px;
+}
+
+.remove-plot {
+    cursor: pointer;
+    margin: 0 10px;
+    width: 13px;
+}
+
+.remove-plot:hover {
+    color: #333;
+}
+
+.contract-plots-container {
+    display: none;
+}
+
+.plot-divisor {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.plot-divisor:last-of-type {
+    display: none;
+}
+
+.proposals-container {
+    display: none;
+    width: 350px;
+    height: 165px;
+    background: transparent;
+    position: absolute;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+    left: -360px;
+    top: 0px;
+    z-index: 1;
+}
+
+.proposals-container:before {
+    content: "";
+    position: absolute;
+    right: -21px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #f5f5f5;
+}
+
+.proposals {
+    padding: 5px;
+    overflow-y: auto;
+    height: 165px;
+}
+
+.proposal {
+    text-align: center;
+    padding: 5px 0;
+    background: whitesmoke;
+    margin-bottom: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                     supported by Chrome and Opera */
+}
+
+.proposal:last-of-type {
+    margin-bottom: 0px;
+}
+
+.proposal:hover {
+    background: #ccc;
+}
+
+.proposal.selected {
+    background: rgba(0, 0, 0, 0.51);
+    color: whitesmoke;
+}
+
+.reject-justification {
+    width: 400px !important;
+    min-height: 100px;
+}
+
+.reject-justification-email {
+    color: darkred;
+    font-size: 11px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.add-new-free-project {
+    float: right;
+    width: 200px;
+    margin-top: 5px;
+}
+
+.free-project-name {
+    width: 300px !important;
+}
+
+.free-project-initial-date, .free-project-final-date {
+    width: 100px !important;
+}
+
+.remove-project-message {
+    text-align: justify;
+    display: block;
+}
+
+.alert-gestao {
+    color: black;
+    background-color: whitesmoke;
+}
+
+.proposal-click-me {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#check-tech-info-modal span {
+    text-align: justify;
+}
+
+#check-tech-info-modal .modal-dialog {
+    width: 90%;
+}
+
+.dates-info {
+    color: gray;
+    margin-top: 10px;
+    width: calc(100% - 100px);
+    font-size: 12px;
+    float: left;
+}
+
+.specific-objectives-container > label {
+    float: left;
+}
+
+.specific-objective-number {
+    padding: 5px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    margin-right: 10px;
+    min-width: 33px;
+    display: inline-block;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.specific-objective {
+    width: calc(100% - 134px);
+    float: right;
+    position: relative;
+}
+
+.prop-specific-objective {
+    width: calc(100% - 45px) !important;
+}
+
+.specific-objectives-container .specific-objective + .specific-objective {
+    margin-top: 10px;
+}
+
+.generated-container {
+    margin-top: 20px;
+}
+
+.generated-container > div {
+    margin: 10px 0;
+}
+
+.generated-container label {
+    width: 130px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.generated-container span {
+    display: inline-block;
+    width: calc(100% - 134px);
+    white-space: pre-wrap;
+}
+
+.prop-label {
+    width: 130px;
+}
+
+.actions-container label {
+    width: 130px;
+    vertical-align: top;
+}
+
+.product-prop-label {
+    width: 155px !important;
+}
+
+.prop-action-description, .prop-goal-description, .prop-stage-final-date, .prop-indicators {
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.prop-action-description, .prop-goal-description, .prop-stage-description {
+    display: inline-block;
+    width: calc(100% - 134px);
+    white-space: pre-wrap;
+}
+
+.prop-product-description {
+    display: inline-block;
+    width: calc(100% - 159px);
+    white-space: pre-wrap;
+}
+
+.action-container {
+    margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.action-container:last-child {
+    margin-bottom: -15px !important;
+    border-bottom: 0px !important;
+}
+
+.goals-container, .stages-container, .products-container {
+    margin-left: 130px;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+}
+
+.goal-container, .stage-container {
+    width: 100%;
+}
+
+.product-container {
+    width: 100%;
+    margin-bottom: 15px !important;
+}
+
+.indicator {
+    display: block;
+}
+
+.schedule table {
+    margin-bottom: 50px;
+}
+
+.schedule th {
+    vertical-align: middle !important;
+}
+
+.increased-th {
+    font-size: 16px;
+}
+
+.schedule {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.schedule .filled {
+    background: rgba(0, 0, 0, 0.51);
+    color: transparent;
+}
+
+.schedule th, .schedule td {
+    text-align: center;
+}
+
+#manage-free-project-modal label {
+    width: 130px;
+}
+
+.contract-public-origin, .free-project-public-origin {
+    display: inline-block;
+    height: 20px;
+    width: 20px !important;
+    vertical-align: middle !important;
+    margin: 4px 0 !important;
+}
+
+@media (max-width: 1385px) {
+    .dates-info {
+        margin-top: 0px;
+    }
+}
