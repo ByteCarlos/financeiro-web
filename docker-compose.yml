@@ -1,7 +1,7 @@
 services:
-  app-financeiro:
+  web-financeiro:
     build: .
-    container_name: financeiro-app
+    container_name: financeiro-web
     restart: always
     ports:
       - 80:80

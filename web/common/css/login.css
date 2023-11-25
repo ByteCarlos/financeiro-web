@@ -1,46 +1,96 @@
 html,
 body {
     height: 100%;
-    background: url("../img/main-background.png");
+    background: url("../img/login_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.ipti-logo {
-    width:80px;
+.submit-button-container {
+    height: 60px;
+    width: 100%;
+}
+
+.submit-button-container button {
+    height: 100%;
+    width: 100%;
+    background: #1D4558;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+span {
+    color: white;
+}
+
+.separator {
+    margin-left: 60px;
+}
+
+a {
+    color: white !important;
+}
+
+.logo {
+    width: 200px;
     margin: 3% auto 2%;
     display: block;
 }
 
+.container {
+    height: 100%;
+    width: 50%;
+    float: left;
+    padding: 0;
+}
+
 .login-panel, .recover-panel, .password-panel {
-    background: transparent;
-    width: 500px;
+    background: rgba(34, 50, 67, 0.7);
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     color: black;
-    padding: 20px 20px 15px;
-    -webkit-box-shadow: 1px 1px 15px black;
-    -moz-box-shadow: 1px 1px 15px black;
-    box-shadow: 1px 1px 15px black;
+    padding: 50px 70px;
 }
 
 .checkbox input[type=checkbox] {
-    width: 15px;
-    height: 15px;
-    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
     cursor: pointer;
 }
 
 .panel-heading.main-panel {
     background-color: transparent !important;
-    color: black !important;
+    color: white !important;
     border-color: transparent !important;
+    text-align: center;
 }
 
 .panel-title {
-    font-size: 24px !important;
-    font-weight: 300;
+    font-size: 30px !important;
+    font-weight: bold;
+}
+
+.fields-containers {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.fields-containers input{
+    height: 100%;
+    background: transparent;
+    color: white ;
 }
 
 .panel-default {
     border-color: whitesmoke;
+}
+
+.panel-body {
+    padding: 15px 70px;
 }
 
 .panel-body i {
@@ -70,12 +120,13 @@ body {
 /* enable absolute positioning */
 .inner-addon {
     position: relative;
+    height: 100%;
 }
 
 /* style icon */
 .inner-addon .fa {
     position: absolute;
-    padding: 10px;
+    padding: 18px;
     pointer-events: none;
 }
 
@@ -90,7 +141,7 @@ body {
 
 /* add padding  */
 .left-addon input {
-    padding-left: 30px;
+    padding-left: 50px;
 }
 
 .right-addon input {
@@ -98,7 +149,17 @@ body {
 }
 
 .register-panel .checkbox a {
-    color: black
+    color: white
+}
+
+.checkbox label{
+    height: 50px;
+}
+
+.checkbox span{
+    color: white;
+    margin-left: 10px;
+    font-size: 15px;
 }
 
 .error {
