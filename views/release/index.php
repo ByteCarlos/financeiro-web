@@ -10,8 +10,8 @@ $this->assetBundles['Receita']->js = [
     'scripts/ReceitaView/Click.js'
 ];
 
-$this->registerCssFile('@web/common/css/site.css?v=1.2', ['depends' => ['app\assets\AppAsset']]);
-$this->registerJsFile('@web/common/js/site.js?v=1.4', ['depends' => ['app\assets\AppAsset']]);
+$this->registerCssFile('@web/common/css/release.css?v=1.2', ['depends' => ['app\assets\AppAsset']]);
+$this->registerJsFile('@web/common/js/release.js?v=1.4', ['depends' => ['app\assets\AppAsset']]);
 
 ?>
 
