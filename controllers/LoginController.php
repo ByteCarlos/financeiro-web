@@ -66,9 +66,9 @@ class LoginController extends Controller
                             'codigo' => $codigo,
                         ])->execute();
                         if ($request->post("rememberme") == "true") {
-                            setcookie('access_token', $codigo, time() + (86400 * 30), '/', '.ipti.org.br');
+                            setcookie('access_token', $codigo, time() + (86400 * 30), '/', '');
                         } else {
-                            setcookie('access_token', $codigo, 0, '/', '.ipti.org.br');
+                            setcookie('access_token', $codigo, 0, '/', '');
                         }
                         $response = ['valid' => TRUE];
                     } else {
