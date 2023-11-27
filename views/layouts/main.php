@@ -21,7 +21,11 @@ AppAsset::register($this);
 </head>
 
 <body>
-<?php $this->beginBody() ?>
+<?php 
+$action = isset($_GET['r']) ? $_GET['r'] : '';
+if($action != 'site/index') {
+$this->beginBody() 
+?>
 
 <div id="wrapper" class="">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
@@ -126,7 +130,10 @@ AppAsset::register($this);
         </div>
     </div>
 </div>
-<?php $this->endBody() ?>
+<?php 
+}
+$this->endBody()
+?>
 </body>
 </html>
 <?php $this->endPage() ?>
