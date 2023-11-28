@@ -17,122 +17,124 @@ AppAsset::register($this);
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: #0c1d25 !important;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin: 0 !important;
+            padding: 0 !important;
+            
+        }
+
+        .sidebar-container {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar-container a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar-container a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar-container .close-btn {
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
+
+        .content {
+            flex: 1;
+            padding: 16px;
+            transition: margin-left 0.5s;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidebar-container {padding-top: 15px;}
+        .sidebar-container a {font-size: 16px;}
+        }
+
+        .toggle-btn, .close-btn {
+            height: 55px;
+            width: 100px;
+            margin-top: 10px;
+            font-size: 30px;
+            background: none;
+            border: none;
+            color: white;
+        }
+
+        .sidebar-action {
+            font-size: 16px !important;
+            color: white !important;
+        }
+
+        .logout-button-sidebar {
+            margin-top: 140%;
+            margin-left: 10%;
+            background: none;
+            border: none;
+            color: white;
+        }
+    </style>
     <?php $this->head() ?>
 </head>
-
 <body>
-<?php 
-$action = isset($_GET['r']) ? $_GET['r'] : '';
-$siteIndex = $action == 'site/index';
-$this->beginBody() 
-?>
-
-<div id="wrapper" class="">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0; <?=$siteIndex ? 'display:none' : ''?>">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/?r=site/index"><i class="fa fa-money"></i> Financeiro</a>
-        </div>
-        <span id="logout">Sair <i class="fa fa-sign-out"></i></span>
-        <span class="welcome"><?= explode(" ", Yii::$app->controller->usuario->nome)[0] ?> <i
-                class="fa fa-cog edit-user"></i></span>
-    </nav>
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <!-- Sidebar -->
-            <div class="row">
-                <div class="sidebar hide-print" style="<?=$siteIndex ? 'display:none' : ''?>">
-                    <ul class="sidebar-nav">
-                        <li>
-                            <a href="/?r=site/index" class="launches-menu"><i class="fa fa-usd"></i> Lançamentos</a>
-                        </li>
-                        <li>
-                            <a href="?r=project/index" class="projects-menu"><i class="fa fa-file-text-o"></i> Projetos <?= Yii::$app->controller->propostasPendentes > 0 ? '<span class="pending-proposals badge">' . Yii::$app->controller->propostasPendentes . '</span>' : ''?></a>
-                        </li>
-                        <li>
-                            <a href="?r=provider/index" class="providers-menu"><i class="fa fa-users"></i> Fornecedores</a>
-                        </li>
-                        <?php if (Yii::$app->controller->usuario->admin || Yii::$app->controller->usuario->admin_lancamentos || Yii::$app->controller->usuario->admin_projetos || Yii::$app->controller->usuario->admin_fornecedores || Yii::$app->controller->usuario->assessor) : ?>
-                        <li>
-                            <a href="?r=charts/index" class="charts-menu"><i class="fa fa-line-chart"></i> Gráficos</a>
-                        </li>
-                        <?php endif ?>
-                        <?php if (Yii::$app->controller->usuario->admin) : ?>
-                            <li>
-                                <a href="/?r=user/index" class="users-menu"><i class="fa fa-user"></i> Usuários</a>
-                            </li>
-                        <?php endif ?>
-                        <li>
-                            <a href="?r=reports/index" class="reports-menu"><i class="fa fa-file-pdf-o"></i> Relatórios</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /#sidebar-wrapper -->
-                <div class="main">
-                    <?php echo $content; ?>
-
-                    <!-- Modal -->
-                    <div id="edit-user-modal" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <form id="edit-user-form" role="form" autocomplete="off">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Editar Informações Pessoais</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="alert alert-danger"></div>
-                                        <div class="edit-user-loading-gif">
-                                            <i class="fa fa-spin fa-spinner fa-3x"></i>
-                                        </div>
-                                        <div class="edit-user-container">
-                                            <div class="form-inline form-group">
-                                                <label class="control-label">Nome Completo <span
-                                                        class="red">*</span></label>
-                                                <input type="text" class="form-control edit-user-name" name="name"
-                                                       value="<?= Yii::$app->controller->usuario->nome ?>">
-                                            </div>
-                                            <div class="form-inline form-group">
-                                                <label class="control-label">E-mail <span class="red">*</span></label>
-                                                <input type="text" class="form-control edit-user-email" name="email"
-                                                       value="<?= Yii::$app->controller->usuario->email ?>">
-                                            </div>
-                                            <label class="new-password-label">Deseja alterar sua senha?</label>
-                                            <div class="form-inline form-group">
-                                                <label class="control-label">Nova senha</label>
-                                                <input type="password" class="form-control edit-user-new-password"
-                                                       name="password">
-                                            </div>
-                                            <div class="form-inline form-group">
-                                                <label class="control-label">Digite novamente</label>
-                                                <input type="password" class="form-control edit-user-new-confirm"
-                                                       name="confirm">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-default" data-dismiss="modal"><i
-                                                class="fa fa-times"></i>
-                                            Fechar
-                                        </button>
-                                        <button type="submit" class="btn btn-default edit-user-info"><i
-                                                class="fa fa-edit"></i> Alterar
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<?php $this->beginBody() ?>
+<div class="container">
+  <button class="toggle-btn" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
+  <div class="sidebar-container" id="sidebar-container">
+    <button class="close-btn" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
+    <a href="/?r=release/index" class="sidebar-action"><i class="fa fa-usd"></i>&nbsp Lançamentos</a>
+    <a href="/?r=project/index" class="sidebar-action"><i class="fa fa-file-text-o"></i>&nbsp Projetos</a>
+    <a href="/?r=provider/index" class="sidebar-action"><i class="fa fa-users"></i>&nbsp Fornecedores</a>
+    <a href="/?r=charts/index" class="sidebar-action"><i class="fa fa-line-chart"></i>&nbsp Gráficos</a>
+    <a href="/?r=user/index" class="sidebar-action"><i class="fa fa-bar-chart"></i>&nbsp Contabilidade</a>
+    <a href="/?r=reports/index" class="sidebar-action"><i class="fa fa-file-pdf-o"></i>&nbsp Relatórios</a>
+    <button class="logout-button-sidebar" id="logout">Sair <i class="fa fa-sign-out"></i></button>
+  </div>
+  <div class="content" id="content">
+        <?php echo $content?>
+  </div>
 </div>
-<?php 
-$this->endBody()
-?>
+
+<script>
+function toggleSidebar() {
+  var sidebar = document.getElementById("sidebar-container");
+  var content = document.getElementById("content");
+
+  if (sidebar.style.width === "250px") {
+    sidebar.style.width = "0";
+    content.style.marginLeft = "0";
+  } else {
+    sidebar.style.width = "250px";
+    content.style.marginLeft = "250px";
+  }
+}
+</script>
+<?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>

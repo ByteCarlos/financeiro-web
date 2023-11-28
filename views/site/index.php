@@ -25,7 +25,7 @@
             </div>
             <div class="line">
                 <a href="/?r=charts/index"><button class="action-button"><i class="fa fa-line-chart"></i>&nbsp Gráficos</button></a>
-                <a href="/?r=user/index"><button class="action-button"><i class="fa fa-user"></i>&nbsp Usuários</button></a>
+                <a href="/?r=user/index"><button class="action-button"><i class="fa fa-bar-chart"></i>&nbsp Contabilidade</button></a>
                 <a href="/?r=reports/index"><button class="action-button"><i class="fa fa-file-pdf-o"></i>&nbsp Relatórios</button></a>
             </div>
         </div>
