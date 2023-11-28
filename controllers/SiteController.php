@@ -1,6 +1,8 @@
 <?php
 
 namespace app\controllers;
+use Yii;
+use yii\web\Controller;
 
 class SiteController extends GlobalController
 {
@@ -11,6 +13,6 @@ class SiteController extends GlobalController
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->render('index', ['action' => '']);
     }
 }

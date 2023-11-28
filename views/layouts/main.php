@@ -23,16 +23,16 @@ AppAsset::register($this);
 <body>
 <?php 
 $action = isset($_GET['r']) ? $_GET['r'] : '';
-if($action != 'site/index') {
+$siteIndex = $action == 'site/index';
 $this->beginBody() 
 ?>
 
 <div id="wrapper" class="">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0; <?=$siteIndex ? 'display:none' : ''?>">
         <div class="navbar-header">
             <a class="navbar-brand" href="/?r=site/index"><i class="fa fa-money"></i> Financeiro</a>
         </div>
-        <span class="logout">Sair <i class="fa fa-sign-out"></i></span>
+        <span id="logout">Sair <i class="fa fa-sign-out"></i></span>
         <span class="welcome"><?= explode(" ", Yii::$app->controller->usuario->nome)[0] ?> <i
                 class="fa fa-cog edit-user"></i></span>
     </nav>
@@ -42,7 +42,7 @@ $this->beginBody()
         <div class="container-fluid">
             <!-- Sidebar -->
             <div class="row">
-                <div class="sidebar hide-print">
+                <div class="sidebar hide-print" style="<?=$siteIndex ? 'display:none' : ''?>">
                     <ul class="sidebar-nav">
                         <li>
                             <a href="/?r=site/index" class="launches-menu"><i class="fa fa-usd"></i> Lançamentos</a>
@@ -131,7 +131,6 @@ $this->beginBody()
     </div>
 </div>
 <?php 
-}
 $this->endBody()
 ?>
 </body>

@@ -196,7 +196,7 @@ $(document).on("click", ".edit-user", function () {
     $("#edit-user-modal").modal("show");
 });
 
-$(document).on("click", ".logout", function () {
+$(document).on("click", "#logout", function () {
     delete_cookie("access_token");
     window.location = "/";
 });

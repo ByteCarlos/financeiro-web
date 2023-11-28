@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+#wrapper, #page-content-wrapper, .container-fluid, .row, .main {
+    margin: 0 !important;
+    height: 100% !important;
+}
+
+#page-content-wrapper {
+    background: #0c1d25;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.actions {
+    text-align: center;
+}
+
+.line {
+    display: inline-flex;
+    align-items: center;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    padding-top: 8%;
+    padding-left: 12%;
+}
+
+.action-button {
+    margin: 20px !important;
+    background-image: linear-gradient(92.88deg, #1d4558 9.16%, #113e53 43.89%, #05364d 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 10rem !important;
+    width: 20rem !important;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.action-button:hover {
+    box-shadow: #05364d 0 1px 30px;
+    transition-duration: .1s;
+}
+  
+@media (min-width: 768px) {
+    .action-button {
+      padding: 0 2.6rem;
+    }
+}
+
+.welcome-container {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.logout-button {
+    appearance: none;
+    background-color: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #24292E;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 6px 16px;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+  }
+  
+  .logout-button:hover {
+    background-color: #F3F4F6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+  }
+  
+  .logout-button:disabled {
+    background-color: #FAFBFC;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #959DA5;
+    cursor: default;
+  }
+  
+  .logout-button:active {
+    background-color: #EDEFF2;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+  }
+  
+  .logout-button:focus {
+    outline: 1px transparent;
+  }
+  
+  .logout-button:before {
+    display: none;
+  }
+  
+  .logout-button:-webkit-details-marker {
+    display: none;
+  }
+
+
